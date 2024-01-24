@@ -1,51 +1,121 @@
-.container {
+.App{
+    width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-top: 1rem;
-    padding: 2rem;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
     
 }
-.wrapper {
+
+.formContainer{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    min-width: 700px;
-    width: 100%;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 7px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
-    border: 1px solid #ccc;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 2rem;
 }
 
-.textInput input {
+.heading{
+    font-size: 3rem;
+    color: transparent;
+    background: linear-gradient(90deg, hsla(252, 91%, 55%, 1) 0%, hsla(214, 97%, 55%, 1) 100%);
+    background-clip: text;
+    text-align: center;
+}
+
+form{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem -0.6rem black;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.inputBox{
+    /* background: #f4f4f4; */
+    border: none;
+    font-family: inherit;
+    outline: none;
     width: 70%;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 18px;
-    /* padding: 10px 15px; */
-    border-radius: 5px;
+    height: 5rem;
+    padding: 2rem;
+    max-height: 8rem;
+    border-radius: 1rem 0 0 1rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
 }
 
-.wrapper .textInput {
-    display: flex;
-    justify-content: space-between;
-}
-button {
-    width: 15%;
-    padding: 14px;
-    outline: none;
+.submit{
+    width: 25%;
+    padding: 0.5rem;
     border: none;
-    color: #fff;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, hsla(252, 91%, 55%, 1) 0%, hsla(214, 97%, 55%, 1) 100%);
+    color: white;
+    font-family: inherit;
     cursor: pointer;
-    font-size: 17px;
-    border-radius: 5px;
-    background: #ffc107;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
 }
-.controls{
+
+.submit:focus{
+    transform: scale(0.98);
+}
+
+.imageContainer{
+    width: 70%;
     display: flex;
-    justify-content: space-around;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
+@media screen and (max-width: 769px){
+    #root{
+        align-items: flex-start;
+    }
+
+    form{
+        width: 95%;
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .inputBox{
+        height: 3rem;
+        padding: 0.5rem;
+    }
+
+    .submit{
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .imageContainer{
+        width: 90%;
+    }
 }
